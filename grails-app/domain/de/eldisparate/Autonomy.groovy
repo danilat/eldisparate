@@ -2,6 +2,7 @@ package de.eldisparate
 
 class Autonomy {
 	String name
+	String urlName
 	Integer area
 	Integer habitants
 	String president
@@ -17,6 +18,7 @@ class Autonomy {
 
     static constraints = {
 		name()
+		urlName()
 		area()
 		habitants()
 		president()

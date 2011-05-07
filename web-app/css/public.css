@@ -1,0 +1,40 @@
+ /* eldisparate css by biotive */
+ 
+/* ESTILOS GENERALES */
+
+body { margin:0 auto; padding:0; font-family: Verdana; font-size:11px; color:#000; text-align:center; line-height:1.4em; background:#ffebbe; }
+html, body {  }
+td {  }
+hr { display: none; }
+img {border:none}
+
+#wrap {padding-top:10px; }
+#head {width:960px;  margin:0px auto; padding-top:50px; text-align: center;}
+#head h1 {display:none;}
+#content {width:960px; margin:0px auto;}
+#foot {clear:both;  padding:30px; font-size: 9px; margin:0px auto;}
+
+/* ESTILOS TEXTO */
+h2 {font-size: 24px; font-weight: bold; text-transform: uppercase; color:#fff; font-stretch: condensed; padding:10px; }
+h3 {font-size:12px;  padding:10px;}
+p {width:400px; font-size: 12px; margin:0px auto; padding:10px; }
+a {color:#000; text-decoration: underline;}
+.cpo {width:350px; text-align: center; font-size:14px; }
+
+/* COLUMNAS */
+#col1 {width:460px; float:left; text-align:left;padding-left:100px; margin-top:40px;}
+#col2 {width:300px; float:right; margin-top:40px;}
+
+/* FORMULARIOS */
+.title {display:block; width:350px; color:#fff; background:#000; border:1px solid black; padding:10px; font-size: 16px; font-weight: bold;}
+form {font-size: 12px; width:350px; color:#666; padding:10px; background:#fff; border:1px solid black; }
+input {width:330px; padding:5px; margin-bottom: 15px; } 
+.bt { display:block; width:50px; text-align:center; padding:7px; color:#fff; text-decoration:none; background:#000;}
+
+/* ESTILOS PARA BORRAR ESTILOS Y OCULTAR*/
+.brr { clear: both; }
+.ocu { display: none; }
+.con:after { content : "."; display : block; height : 0; clear : both; visibility : hidden; }
+.con { display : inline-block; }
+* html .con { height : 1%; }
+.con { display : block; }
