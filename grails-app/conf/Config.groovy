@@ -85,3 +85,6 @@ log4j = {
 
     warn   'org.mortbay.log'
 }
+
+
+grails.config.locations = [ "file:/Users/danilat/cloudfoundry.groovy"]
