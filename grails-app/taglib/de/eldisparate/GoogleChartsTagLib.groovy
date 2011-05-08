@@ -79,7 +79,7 @@ class GoogleChartsTagLib {
 			def country = countries.find{it.name==conflictive.name}
 			if(country){
 				conflictiveSells = true
-				out << "<span class=\"text_paises\">${conflictive.realName}: ${country.money} €</span><br /> "
+				out << "<span class=\"text_paises\">${conflictive.realName}: ${formatNumber(number:country.money, type:'number')} €</span><br /> "
 			}
 		}.join()
 		

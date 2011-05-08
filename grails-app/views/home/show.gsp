@@ -47,11 +47,11 @@
 
 		<div id="col3">
 			<span class="title_imex">Importa</span><br />
-			<span class="text_imex">${autonomy.totalImports?:0} €</span>
+			<span class="text_imex"><g:formatNumber number="${autonomy.totalImports?:0}" type="number"/> €</span>
 		</div>
 		<div id="col4">
 			<span class="title_imex">Exporta</span>
-			<span class="text_imex">${autonomy.totalExports?:0} €</span>
+			<span class="text_imex"><g:formatNumber number="${autonomy.totalExports?:0}" type="number"/> €</span>
 		</div>
 		<br class="brr" /><br /><br />
 		<div class="quote">Totales. Incluyen todo tipo de bienes.<br />Alimentos, animales, plantas, vehículos, muebles, máquinas, metales, químicos...</div>
@@ -69,13 +69,13 @@
 		<div id="col3">
 			<span class="pretitle_imex">Importa</span><br />
 			<span class="title_imex">En Armas</span><br />
-			<span class="text_imex">${autonomy.gunsImports?:0} €</span><br /><br />
+			<span class="text_imex"><g:formatNumber number="${autonomy.gunsImports?:0}" type="number"/> €</span><br /><br />
 
 		</div>
 		<div id="col4">
 			<span class="pretitle_imex">Exporta</span><br />
 			<span class="title_imex">En Armas</span><br />
-			<span class="text_imex">${autonomy.gunsExports?:0} €</span><br /><br />
+			<span class="text_imex"><g:formatNumber number="${autonomy.gunsExports?:0}" type="number"/> €</span><br /><br />
 		</div>
 		<br class="brr" />
 		<div class="quote">Armas de guerra, armas de fuego, explosivos, municiones, proyectiles, armas blancas, partes y accesorios</div>
@@ -126,7 +126,7 @@
 		<div class="linea4px"></div>
 		<div class="linea2px"></div>
 		<div id="col5">
-			<span class="title_dest">Destinos <span class="red">Disparatados</span><br /><span class="pq">(* preocupantes)</span></span><br /><br />
+			<span class="title_dest">Destinos <span class="red">disparatados</span><br /><span class="pq">* preocupantes</span></span><br /><br />
 			<div class="quote">
 
 * <span class="bold">¿Qué son destinos <i>preocupantes</i>?</span> Aquellos que están en conflicto armado, <br />sufren situaciones de grave inestabilidad interna o en los que se producen graves violaciones de los derechos humanos.</div><br /><br /><br />
