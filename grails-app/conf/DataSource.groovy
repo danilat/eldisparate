@@ -12,6 +12,11 @@ hibernate {
 // environment specific settings
 environments {
     development {
+		/*driverClassName = "com.mysql.jdbc.Driver"
+	    username = "root"
+		password = ""
+        dbCreate = "update"
+        url = "jdbc:mysql://localhost/eldisparate"*/
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop','update'
             url = "jdbc:hsqldb:mem:devDB"
@@ -19,14 +24,14 @@ environments {
     }
     test {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:hsqldb:mem:testDb"
+            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+            url = "jdbc:hsqldb:mem:devDB"
         }
     }
     production {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+            url = "jdbc:hsqldb:mem:devDB"
         }
     }
 }
