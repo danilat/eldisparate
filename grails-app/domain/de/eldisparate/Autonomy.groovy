@@ -28,6 +28,5 @@ class Autonomy {
 		totalExports(nullable: true, blank:true)
 		gunsImports(nullable: true, blank:true)
 		gunsExports(nullable: true, blank:true)
-		imageMapName(nullable: true, blank:true)
     }
 }
