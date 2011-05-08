@@ -36,6 +36,8 @@ class GoogleChartsTagLib {
 		}
 		String imageSrc = "http://chart.apis.google.com/chart?chf=${background}&chxt=x,y&chbh=23,4,9&chs=${width}x${height}&cht=bhs&chco=${barColor}&chxs=0,000000,14,1,l,000000|1,000000,14,0,l,000000&chxl=1:${countryNames}&chd=t:${percentages}"
 		out << imageSrc
+		}else{
+			out << resource(dir:'img',file:'nohaydatos.png')
 		}
 	}
 	
