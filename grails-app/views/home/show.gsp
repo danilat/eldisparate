@@ -106,15 +106,17 @@ barcos, muebles, máquinas, metales, químicos,...</div>
 		<div class="quote">Todo tipo de material, animales, leche, azucar, cacao, <br />plantas, vehículos, aviones, 
 barcos, muebles, máquinas, metales, químicos,...</div> 
 		<div id="col3"> 
-			<img src="${barChart()}" alt="Importaciones" />
+			<img src="${barChart(countries:autonomy.importsFrom, totalOfMoney: autonomy.gunsImports)}" alt="Importaciones" />
 		</div> 
 		<div id="col4"> 
-			<img src="${barChart()}" alt="Exportaciones" />
-		</div> 
+			<img src="${barChart(countries:autonomy.exportsTo, totalOfMoney: autonomy.gunsExports)}" alt="Exportaciones" />
+		</div>
+		<br class="brr"/> 
 		<div id="col3"> 
 		<iframe src="http://player.vimeo.com/video/23420443?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="440" height="88" frameborder="0"></iframe><br /><br /> 
 		</div> 
-			<div id="col4"> 
+		
+		<div id="col4"> 
 		<iframe src="http://player.vimeo.com/video/23420400?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="440" height="88" frameborder="0"></iframe><br /><br /> 
 		</div>	
 		
@@ -135,12 +137,10 @@ porque están en conflicto armado, sufren situaciones de grave inestabilidad int
 porque en ellos se producen graves violaciones de los derechos humanos, etc</div><br /><br /> 
 </div> 
 <div id="col3"> 
-<img src="${worldMap(autonomy: autonomy)}" alt=""/>
+<img src="${worldMap(countries: autonomy.exportsTo)}" alt=""/>
 </div> 
 <div id="col4"> 
-	${conflictiveCountries()}
-<span class="text_paises">Angola: 23.000</span><br /> 
-<span class="text_paises">Angola: 23.000</span><br /> 
+	${conflictiveCountries(countries: autonomy.exportsTo)}
 </div> 
 <br class="brr" /> 
 <iframe src="http://player.vimeo.com/video/23420434?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="326" height="223" frameborder="0"></iframe> 

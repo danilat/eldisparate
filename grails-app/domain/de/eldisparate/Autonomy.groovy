@@ -17,7 +17,7 @@ class Autonomy {
 	String gunsImports = ""
 	String gunsExports = ""
 	
-	static hasMany = [importers:ImporterCountry, exporters:ExporterCountry]
+	static hasMany = [exportsTo:ImporterCountry, importsFrom:ExporterCountry]
 
     static constraints = {
 		name()

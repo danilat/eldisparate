@@ -1,8 +1,12 @@
 import de.eldisparate.Autonomy
+import de.eldisparate.ExporterCountry
+import de.eldisparate.ImporterCountry
+
 class BootStrap {
 
     def init = { servletContext ->
-	
+		def path = servletContext.getRealPath("/")
+		
 		def autonomiesNames =["ANDALUCIA", "ARAGON", "ASTURIAS", "BALEARES", "CANARIAS",
 		"CANTABRIA", "CASTILLA LA MANCHA", "CASTILLA LEON", "CATALUNYA", "CIUDAD AUTONOMA DE CEUTA",
 		"CIUDAD AUTONOMA DE MELILLA", "COMUNIDAD VALENCIANA", "EXTREMADURA", "GALICIA",
@@ -13,10 +17,10 @@ class BootStrap {
 			if(!autonomy){
 				autonomy = new Autonomy(name: name)
 				autonomy.save(flush:true,failOnError:true)
+				saveExporterCountries("${path}data/${name.toLowerCase().replaceAll(' ', '_')}/Importaciones.dat", autonomy)
+				saveImporterCountries("${path}data/${name.toLowerCase().replaceAll(' ', '_')}/Exportaciones.dat", autonomy)
 			}
 		}
-		
-		def path = servletContext.getRealPath("/")
 		
 		saveCSVDataToAutonomies("${path}/data/Exportaciones.dat", 'totalExports')
 		saveCSVDataToAutonomies("${path}/data/Importaciones.dat", 'totalImports')
@@ -27,6 +31,39 @@ class BootStrap {
 		loadCSVINEData("${path}/data/DatosINE.csv")
 		
     }
+	def saveExporterCountries(path, autonomy){
+		File file = new File(path)
+		if(file.exists()){
+			file.eachLine() { line ->  
+			    def field = line.tokenize("#")
+				if(field[0]!="PAIS" && field[0]!="Total"){
+				def countryName = field[0]
+				def money = field[2]
+				def country = new ExporterCountry(name:countryName, money: money, autonomy: autonomy)
+				country.save(flush:true,failOnError:true)
+				}
+			}
+		}else{
+			println "${path} no existe"
+		}
+	}
+	def saveImporterCountries(path, autonomy){
+		File file = new File(path)
+		if(file.exists()){
+			file.eachLine() { line ->  
+			    def field = line.tokenize("#")
+				if(field[0]!="PAIS" && field[0]!="Total"){
+				def countryName = field[0]
+				def money = field[2]
+				def country = new ImporterCountry(name:countryName, money: money, autonomy: autonomy)
+				country.save(flush:true,failOnError:true)
+				}
+			}
+		}else{
+			println "${path} no existe"
+		}
+	}
+
 	def saveCSVDataToAutonomies(path, attributeToSave){
 		File file = new File(path)
 		file.eachLine() { line ->  
