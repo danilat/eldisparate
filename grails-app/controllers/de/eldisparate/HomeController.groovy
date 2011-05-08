@@ -1,14 +1,17 @@
 package de.eldisparate
 
 class HomeController {
+	def countriesService
 
-    def index = { }
+    def index = { 
+		return [conflictives: countriesService.conflictives()]
+	}
 
 	def show = { 
-		def urlName = params.id
-		def autonomy = Autonomy.findByUrlName(urlName)
+		def name = params.id.toUpperCase()
+		def autonomy = Autonomy.findByName(name)
 		if(autonomy){
-			return [autonomy:autonomy]
+			return [autonomy:autonomy, conflictives: countriesService.conflictives()]
 		}else{
 			render "No existe la Comunidad Autónoma"
 		}
