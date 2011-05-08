@@ -16,16 +16,27 @@ class GoogleChartsTagLib {
 			def counter = 0
 			def acumulated = 0
 			if(countries){
+				def top20Countries = []
+				
 				countries.each{
-					countryNames += "|${it.name}"
 					def money = new BigDecimal("${it.money}".replaceAll("\\.","").replaceAll(",","."))
-					acumulated += money
-					percentages += (money/totalOfMoney*100).toString()
-					counter++
-					height += 25
-					if(counter<countries.size()){
-						percentages += ","
-					}
+					def percentage = (money/totalOfMoney*100)
+					top20Countries << [name: it.name, money: money, percentage: percentage]
+				}
+				top20Countries.sort{ -it.percentage }
+				if(top20Countries.size() > 20){
+					top20Countries = top20Countries[0..20]
+				}
+								
+				top20Countries.each{
+						countryNames += "|${it.name}"
+						acumulated += it.money
+						percentages += it.percentage.toString()
+						counter++
+						height += 25
+						if(counter<top20Countries.size()){
+							percentages += ","
+						}
 				}
 			}
 		
@@ -73,7 +84,7 @@ class GoogleChartsTagLib {
 		}.join()
 		
 		if(!conflictiveSells){
-			out << "<span class=\"text_paises\">No se exportaron armas</span><br /> "
+			out << "<span class=\"text_paises\">No se exportaron armas a países preocupantes.</span><br /> "
 		}
 	}
 }

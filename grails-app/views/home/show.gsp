@@ -93,7 +93,9 @@
 		<div class="linea4px"></div>
 		<div class="linea2px"></div>
 		<div id="col5">
-			<span class="title_dest">Países a los que ${autonomy.realName}</span>
+			<span class="title_dest">Países a los que <br/>${autonomy.realName}</span>
+			<br/>
+			<span class="quote">* Se muestran los países más representativos</span>
 		</div>
 		<div id="col3">
 			<span class="pretitle_imex">Importa armas</span>
