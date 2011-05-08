@@ -2,27 +2,29 @@ package de.eldisparate
 
 class Autonomy {
 	String name
-	String urlName
+	String urlName = ""
 	Integer area
 	Integer habitants
-	String president
-	String pib
-	String ranking
+	String president = ""
+	String pib = ""
+	String ranking = ""
 	
-	Integer totalImports
-	Integer totalExports
-	Integer gunsImports
-	Integer gunsExports
+	String totalImports = ""
+	String totalExports = ""
+	String gunsImports = ""
+	String gunsExports = ""
 	
-	String imageMapName
+	String imageMapName = ""
+	
 
     static constraints = {
 		name()
-		urlName()
-		area()
-		habitants()
-		president()
-		pib()
+		urlName(nullable: true, blank:true)
+		area(nullable: true, blank:true)
+		habitants(nullable: true, blank:true)
+		president(nullable: true, blank:true)
+		pib(nullable: true, blank:true)
+		ranking(nullable: true, blank:true)
 		totalImports(nullable: true, blank:true)
 		totalExports(nullable: true, blank:true)
 		gunsImports(nullable: true, blank:true)
