@@ -1,6 +1,8 @@
 package de.eldisparate
 
 class GoogleChartsTagLib {
+	def countriesService
+	
 	def barChart = { attrs, body ->
 		//def autonomy = attrs.autonomy
 		//def countries = autonomy.exportCountries
@@ -17,10 +19,20 @@ class GoogleChartsTagLib {
 	def worldMap = { attrs, body ->
 		//def autonomy = attrs.autonomy
 		//def countries = autonomy.exportCountries
-		def countrycCodes = "ESAO"
+		
+		def conflictiveCountries = countriesService.conflictives()
+		
+		def countryCodes = conflictiveCountries.collect{it.code}.join()
 		def background = "FFEBBE"
 		def countryColor = "B8002D"
-		String imageSrc = "http://chart.apis.google.com/chart?chf=bg,s,${background}&chs=440x220&cht=t&chco=${background}|${countryColor}&chld=${countrycCodes}&chd=s:____&chtm=world"
+		String imageSrc = "http://chart.apis.google.com/chart?chf=bg,s,${background}&chs=440x220&cht=t&chco=${background}|${countryColor}&chld=${countryCodes}&chd=s:____&chtm=world"
 		out << imageSrc
+	}
+	
+	def conflictiveCountries = { attrs, body ->
+		def conflictiveCountries = countriesService.conflictives()
+		conflictiveCountries.each{
+			out << "<span class=\"text_paises\">${it.realName}: 23.000</span><br /> "
+		}
 	}
 }
