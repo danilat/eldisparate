@@ -8,7 +8,7 @@ class HomeController {
 	}
 
 	def show = { 
-		def name = params.id.toUpperCase()
+		def name = params.id.toUpperCase().replaceAll("-", " ")
 		def autonomy = Autonomy.findByName(name)
 		if(autonomy){
 			return [autonomy:autonomy, conflictives: countriesService.conflictives()]
