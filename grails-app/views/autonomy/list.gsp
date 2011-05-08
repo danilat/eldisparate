@@ -26,13 +26,13 @@
                         
                             <g:sortableColumn property="name" title="${message(code: 'autonomy.name.label', default: 'Name')}" />
                         
+                            <g:sortableColumn property="realName" title="${message(code: 'autonomy.realName.label', default: 'Real Name')}" />
+                        
                             <g:sortableColumn property="area" title="${message(code: 'autonomy.area.label', default: 'Area')}" />
                         
                             <g:sortableColumn property="habitants" title="${message(code: 'autonomy.habitants.label', default: 'Habitants')}" />
                         
                             <g:sortableColumn property="president" title="${message(code: 'autonomy.president.label', default: 'President')}" />
-                        
-                            <g:sortableColumn property="pib" title="${message(code: 'autonomy.pib.label', default: 'Pib')}" />
                         
                         </tr>
                     </thead>
@@ -44,13 +44,13 @@
                         
                             <td>${fieldValue(bean: autonomyInstance, field: "name")}</td>
                         
+                            <td>${fieldValue(bean: autonomyInstance, field: "realName")}</td>
+                        
                             <td>${fieldValue(bean: autonomyInstance, field: "area")}</td>
                         
                             <td>${fieldValue(bean: autonomyInstance, field: "habitants")}</td>
                         
                             <td>${fieldValue(bean: autonomyInstance, field: "president")}</td>
-                        
-                            <td>${fieldValue(bean: autonomyInstance, field: "pib")}</td>
                         
                         </tr>
                     </g:each>

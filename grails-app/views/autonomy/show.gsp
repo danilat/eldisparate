@@ -37,6 +37,13 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="autonomy.realName.label" default="Real Name" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "realName")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="autonomy.area.label" default="Area" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "area")}</td>
@@ -61,6 +68,13 @@
                             <td valign="top" class="name"><g:message code="autonomy.pib.label" default="Pib" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "pib")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="autonomy.ranking.label" default="Ranking" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "ranking")}</td>
                             
                         </tr>
                     
@@ -93,16 +107,28 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="autonomy.imageMapName.label" default="Image Map Name" /></td>
+                            <td valign="top" class="name"><g:message code="autonomy.exporters.label" default="Exporters" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "imageMapName")}</td>
+                            <td valign="top" style="text-align: left;" class="value">
+                                <ul>
+                                <g:each in="${autonomyInstance.exporters}" var="e">
+                                    <li><g:link controller="exporterCountry" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
+                                </g:each>
+                                </ul>
+                            </td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="autonomy.ranking.label" default="Ranking" /></td>
+                            <td valign="top" class="name"><g:message code="autonomy.importers.label" default="Importers" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "ranking")}</td>
+                            <td valign="top" style="text-align: left;" class="value">
+                                <ul>
+                                <g:each in="${autonomyInstance.importers}" var="i">
+                                    <li><g:link controller="importerCountry" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
+                                </g:each>
+                                </ul>
+                            </td>
                             
                         </tr>
                     

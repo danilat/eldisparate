@@ -39,6 +39,15 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="realName"><g:message code="autonomy.realName.label" default="Real Name" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'realName', 'errors')}">
+                                    <g:textField name="realName" value="${autonomyInstance?.realName}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="area"><g:message code="autonomy.area.label" default="Area" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'area', 'errors')}">
@@ -75,10 +84,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="ranking"><g:message code="autonomy.ranking.label" default="Ranking" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'ranking', 'errors')}">
+                                    <g:textField name="ranking" value="${autonomyInstance?.ranking}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="totalImports"><g:message code="autonomy.totalImports.label" default="Total Imports" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'totalImports', 'errors')}">
-                                    <g:textField name="totalImports" value="${fieldValue(bean: autonomyInstance, field: 'totalImports')}" />
+                                    <g:textField name="totalImports" value="${autonomyInstance?.totalImports}" />
                                 </td>
                             </tr>
                         
@@ -87,7 +105,7 @@
                                     <label for="totalExports"><g:message code="autonomy.totalExports.label" default="Total Exports" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'totalExports', 'errors')}">
-                                    <g:textField name="totalExports" value="${fieldValue(bean: autonomyInstance, field: 'totalExports')}" />
+                                    <g:textField name="totalExports" value="${autonomyInstance?.totalExports}" />
                                 </td>
                             </tr>
                         
@@ -96,7 +114,7 @@
                                     <label for="gunsImports"><g:message code="autonomy.gunsImports.label" default="Guns Imports" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'gunsImports', 'errors')}">
-                                    <g:textField name="gunsImports" value="${fieldValue(bean: autonomyInstance, field: 'gunsImports')}" />
+                                    <g:textField name="gunsImports" value="${autonomyInstance?.gunsImports}" />
                                 </td>
                             </tr>
                         
@@ -105,25 +123,7 @@
                                     <label for="gunsExports"><g:message code="autonomy.gunsExports.label" default="Guns Exports" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'gunsExports', 'errors')}">
-                                    <g:textField name="gunsExports" value="${fieldValue(bean: autonomyInstance, field: 'gunsExports')}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="imageMapName"><g:message code="autonomy.imageMapName.label" default="Image Map Name" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'imageMapName', 'errors')}">
-                                    <g:textField name="imageMapName" value="${autonomyInstance?.imageMapName}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="ranking"><g:message code="autonomy.ranking.label" default="Ranking" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'ranking', 'errors')}">
-                                    <g:textField name="ranking" value="${autonomyInstance?.ranking}" />
+                                    <g:textField name="gunsExports" value="${autonomyInstance?.gunsExports}" />
                                 </td>
                             </tr>
                         

@@ -2,7 +2,7 @@ package de.eldisparate
 
 class Autonomy {
 	String name
-	String urlName = ""
+	String realName = ""
 	Integer area
 	Integer habitants
 	String president = ""
@@ -14,13 +14,11 @@ class Autonomy {
 	String gunsImports = ""
 	String gunsExports = ""
 	
-	String imageMapName = ""
-	
 	static hasMany = [importers:ImporterCountry, exporters:ExporterCountry]
 
     static constraints = {
 		name()
-		urlName(nullable: true, blank:true)
+		realName(nullable: true, blank:true)
 		area(nullable: true, blank:true)
 		habitants(nullable: true, blank:true)
 		president(nullable: true, blank:true)
