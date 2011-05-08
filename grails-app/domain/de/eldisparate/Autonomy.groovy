@@ -16,6 +16,7 @@ class Autonomy {
 	
 	String imageMapName = ""
 	
+	static hasMany = [importers:ImporterCountry, exporters:ExporterCountry]
 
     static constraints = {
 		name()
