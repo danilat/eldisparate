@@ -20,17 +20,17 @@ img {border:none}
 
 
 /* ESTILOS TEXTO */
-h2 {font-size: 24px; font-weight: bold; text-transform: uppercase; color:#fff; font-stretch: condensed; padding:10px; }
+h2 {font-size: 14px; font-family: Georgia; color:#000; padding-top:70px;}
 h3 {font-size:12px;  padding:10px;}
 p {width:400px; font-size: 12px; margin:0px auto; padding:10px; }
 a {color:#000; text-decoration: underline;}
 .cpo {width:350px; text-align: center; font-size:14px; }
 .title_comunidad {font-family: Georgia; font-size:36px;text-transform: uppercase; font-weight: bold;}
 .title_datos {font-family: Arial; font-size:18px; font-weight: bold; color:#B8002D; text-align:left;}
-.text_datos {font-family: Arial; font-size:18px; font-weight: bold; color:#000; text-align:left; line-height: 1.3em;}
+.text_datos {font-family: Arial; font-size:16px; font-weight: bold; color:#000; text-align:left; line-height: 1.3em;}
 .pretitle_imex {font-family: Georgia; font-size:30px; font-weight: bold; color:#af6d0e;}
 .title_imex {font-family: Georgia; font-size:60px;text-transform: uppercase; font-weight: bold; color:#B8002D;}
-.text_imex {font-family: Arial; font-size:60px;text-transform: uppercase; font-weight: bold; color:#000;}
+.text_imex {font-family: Arial; font-size:50px;text-transform: uppercase; font-weight: bold; color:#000;}
 .quote {clear:both; font-family: Georgia; font-size: 14px; text-align: center;}
 .red {color:#B8002D;}
 .nar {color:#af6d0e; font-weight: bold;}
