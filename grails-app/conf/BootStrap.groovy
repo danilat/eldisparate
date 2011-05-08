@@ -36,10 +36,10 @@ class BootStrap {
 		if(file.exists()){
 			file.eachLine() { line ->  
 			    def field = line.tokenize("#")
-				if(field[0]!="PAIS" && field[0]!="Total"){
+				if(field[0] && field[0]!="PAIS" && field[0]!="Total"){
 				def countryName = field[0]
-				def money = field[2]
-				def country = new ExporterCountry(name:countryName, money: money, autonomy: autonomy)
+				BigInteger money = new BigDecimal(field[2].replaceAll("\\.","").replaceAll(",",".")) * 1000
+				def country = new ExporterCountry(name:countryName, money: money.toString(), autonomy: autonomy)
 				country.save(flush:true,failOnError:true)
 				}
 			}
@@ -52,10 +52,10 @@ class BootStrap {
 		if(file.exists()){
 			file.eachLine() { line ->  
 			    def field = line.tokenize("#")
-				if(field[0]!="PAIS" && field[0]!="Total"){
+				if(field[0] && field[0]!="PAIS" && field[0]!="Total"){
 				def countryName = field[0]
-				def money = field[2]
-				def country = new ImporterCountry(name:countryName, money: money, autonomy: autonomy)
+				BigInteger money = new BigDecimal(field[2].replaceAll("\\.","").replaceAll(",",".")) * 1000
+				def country = new ImporterCountry(name: countryName, money: money.toString(), autonomy: autonomy)
 				country.save(flush:true,failOnError:true)
 				}
 			}
@@ -69,10 +69,12 @@ class BootStrap {
 		file.eachLine() { line ->  
 		    def field = line.tokenize("#")  
 			def autonomyName = field[0]
-			def money = field[2]
-			def autonomy = Autonomy.findByName(autonomyName)
-			if(autonomy){
-				autonomy[attributeToSave] = money
+			if(field[2] && field[2]!="VALOR"){
+				BigInteger money = new BigDecimal(field[2].replaceAll("\\.","").replaceAll(",",".")) * 1000
+				def autonomy = Autonomy.findByName(autonomyName)
+				if(autonomy){
+					autonomy[attributeToSave] = money.toString()
+				}
 			}
 		}
 	}

@@ -46,11 +46,11 @@
 		
 		<div id="col3"> 
 			<span class="title_imex">Importa</span><br /> 
-			<span class="text_imex">${autonomy.totalImports}</span> 
+			<span class="text_imex">${autonomy.totalImports} €</span> 
 		</div> 
 		<div id="col4"> 
 			<span class="title_imex">Exporta</span> 
-			<span class="text_imex">${autonomy.totalExports}</span> 
+			<span class="text_imex">${autonomy.totalExports} €</span> 
 		</div> 
 		<br class="brr" /><br /><br /> 
 		<div class="quote">Todo tipo de material, animales, leche, azucar, cacao, <br />plantas, vehículos, aviones, 
@@ -68,14 +68,14 @@ barcos, muebles, máquinas, metales, químicos,...</div>
 		
 		<div id="col3"> 
 			<span class="pretitle_imex">Importa</span><br /> 
-			<span class="title_imex">En Armas</span><br /> 
-			<span class="text_imex">${autonomy.gunsImports}</span><br /><br /> 
+			<span class="title_imex">En Armas</span><br/> 
+			<span class="text_imex">${autonomy.gunsImports?:0} €</span><br /><br /> 
 			
 		</div> 
 		<div id="col4"> 
 			<span class="pretitle_imex">Exporta</span><br /> 
-			<span class="title_imex">En Armas</span> 
-			<span class="text_imex">${autonomy.gunsExports}</span><br /><br /> 
+			<span class="title_imex">En Armas</span><br/>
+			<span class="text_imex">${autonomy.gunsExports?:0} €</span><br /><br /> 
 		</div> 
 		<br class="brr" /><br /><br /> 
 		<div class="quote">Todo tipo de material, animales, leche, azucar, cacao, <br />plantas, vehículos, aviones, 
