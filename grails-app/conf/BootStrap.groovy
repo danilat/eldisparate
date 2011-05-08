@@ -15,7 +15,6 @@ class BootStrap {
 				autonomy.save(flush:true,failOnError:true)
 			}
 		}
-		println Autonomy.count()
 		
 		saveCSVDataToAutonomies("/Users/danilat/grails_apps/eldisparate/data/Exportaciones.dat", 'totalExports')
 		saveCSVDataToAutonomies("/Users/danilat/grails_apps/eldisparate/data/Importaciones.dat", 'totalImports')
