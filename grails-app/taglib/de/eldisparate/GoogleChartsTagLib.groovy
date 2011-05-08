@@ -4,6 +4,7 @@ class GoogleChartsTagLib {
 	def countriesService
 	
 	def barChart = { attrs, body ->
+		println attrs.totalOfMoney
 		def totalOfMoney = new BigDecimal(attrs.totalOfMoney.replaceAll("\\.","").replaceAll(",","."))
 		def countries = attrs.countries
 		def height = 60
@@ -20,7 +21,7 @@ class GoogleChartsTagLib {
 			acumulated += money
 			percentages += (money/totalOfMoney*100).toString()
 			counter++
-			height += 20
+			height += 25
 			if(counter<countries.size()){
 				percentages += ","
 			}
@@ -56,8 +57,9 @@ class GoogleChartsTagLib {
 		def conflictiveCountries = countriesService.conflictives()
 		
 		def countryCodes = conflictiveCountries.collect{ conflictive ->
-			if(countries.name.contains(conflictive.name)){
-				out << "<span class=\"text_paises\">${conflictive.realName}: 23.000</span><br /> "
+			def country = countries.find{it.name==conflictive.name}
+			if(country){
+				out << "<span class=\"text_paises\">${conflictive.realName}: ${country.money} €</span><br /> "
 			}
 		}.join()
 	}
