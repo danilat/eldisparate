@@ -28,17 +28,17 @@
 		<div class="linea2px"></div> 
 		<div id="col1"><img src="img/mapas_comunidades/${autonomy.name.toLowerCase().replaceAll(' ', '_')}.png" /></div> 
 		<div id="col2"> 
-			<span class="title_comunidad">${autonomy.name}</span><br /><br /><br /><br /> 
+			<span class="title_comunidad">${autonomy.realName}</span><br /><br /><br /><br /> 
 			<span class="title_datos">Datos generales:</span><br /> 
 			<span class="text_datos"> 
-			94.223 km²<br /> 
-			2.553.301 hab.²<br /> 
-			26,57 hab/km²<br /><br /> 
+			${autonomy.area} km²<br /> 
+			${autonomy.habitants} hab.²<br /> 
+			TODO: 26,57 hab/km²<br /><br /> 
  
-			Juan Vicente Herrera (PP)<br /><br /> 
+			${autonomy.president}<br /><br /> 
  
-			PIB (nominal)	Puesto 6.º<br /> 
-			€ 58.067 millones <br /></span> 
+			PIB (nominal)	Puesto ${autonomy.ranking}<br /> 
+			${autonomy.pib} <br /></span> 
 		</div> 
 		<!-- INICIO BLOQUE --> 
 		<div class="linea4px"></div> 

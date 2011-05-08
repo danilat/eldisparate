@@ -3,8 +3,8 @@ package de.eldisparate
 class Autonomy {
 	String name
 	String realName = ""
-	Integer area
-	Integer habitants
+	String area = ""
+	String habitants = ""
 	String president = ""
 	String pib = ""
 	String ranking = ""
