@@ -33,7 +33,7 @@
 			<span class="text_datos"> 
 			${autonomy.area} km²<br /> 
 			${autonomy.habitants} hab.²<br /> 
-			TODO: 26,57 hab/km²<br /><br /> 
+			${autonomy.density} hab/km²<br /><br /> 
  
 			${autonomy.president}<br /><br /> 
  

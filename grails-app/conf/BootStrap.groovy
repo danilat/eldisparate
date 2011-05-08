@@ -50,9 +50,12 @@ class BootStrap {
 				autonomy.realName = field[1]
 				autonomy.area = field[7]
 				autonomy.habitants = field[2]
+				autonomy.density = field[8]
 				autonomy.pib = field[3]
 				autonomy.ranking = field[4]
-				autonomy.president = "${field[9]} (${field[10]})"
+				autonomy.president = "${field[9]} - ${field[10]}"
+				autonomy.pibPerCapita = field[5]
+				autonomy.rankingPerCapita = field[6]
 			}
 		}
 	}

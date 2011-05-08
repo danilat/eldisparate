@@ -5,9 +5,12 @@ class Autonomy {
 	String realName = ""
 	String area = ""
 	String habitants = ""
+	String density = ""
 	String president = ""
 	String pib = ""
 	String ranking = ""
+	String pibPerCapita = ""
+	String rankingPerCapita = ""
 	
 	String totalImports = ""
 	String totalExports = ""
@@ -21,9 +24,12 @@ class Autonomy {
 		realName(nullable: true, blank:true)
 		area(nullable: true, blank:true)
 		habitants(nullable: true, blank:true)
+		density(nullable: true, blank:true)
 		president(nullable: true, blank:true)
 		pib(nullable: true, blank:true)
 		ranking(nullable: true, blank:true)
+		pibPerCapita(nullable: true, blank:true)
+		rankingPerCapita(nullable: true, blank:true)
 		totalImports(nullable: true, blank:true)
 		totalExports(nullable: true, blank:true)
 		gunsImports(nullable: true, blank:true)
