@@ -51,7 +51,7 @@
                                     <label for="area"><g:message code="autonomy.area.label" default="Area" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'area', 'errors')}">
-                                    <g:textField name="area" value="${fieldValue(bean: autonomyInstance, field: 'area')}" />
+                                    <g:textField name="area" value="${autonomyInstance?.area}" />
                                 </td>
                             </tr>
                         
@@ -60,7 +60,16 @@
                                     <label for="habitants"><g:message code="autonomy.habitants.label" default="Habitants" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'habitants', 'errors')}">
-                                    <g:textField name="habitants" value="${fieldValue(bean: autonomyInstance, field: 'habitants')}" />
+                                    <g:textField name="habitants" value="${autonomyInstance?.habitants}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="density"><g:message code="autonomy.density.label" default="Density" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'density', 'errors')}">
+                                    <g:textField name="density" value="${autonomyInstance?.density}" />
                                 </td>
                             </tr>
                         
@@ -88,6 +97,24 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'ranking', 'errors')}">
                                     <g:textField name="ranking" value="${autonomyInstance?.ranking}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="pibPerCapita"><g:message code="autonomy.pibPerCapita.label" default="Pib Per Capita" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'pibPerCapita', 'errors')}">
+                                    <g:textField name="pibPerCapita" value="${autonomyInstance?.pibPerCapita}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="rankingPerCapita"><g:message code="autonomy.rankingPerCapita.label" default="Ranking Per Capita" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'rankingPerCapita', 'errors')}">
+                                    <g:textField name="rankingPerCapita" value="${autonomyInstance?.rankingPerCapita}" />
                                 </td>
                             </tr>
                         

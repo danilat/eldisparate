@@ -32,7 +32,7 @@
                         
                             <g:sortableColumn property="habitants" title="${message(code: 'autonomy.habitants.label', default: 'Habitants')}" />
                         
-                            <g:sortableColumn property="president" title="${message(code: 'autonomy.president.label', default: 'President')}" />
+                            <g:sortableColumn property="density" title="${message(code: 'autonomy.density.label', default: 'Density')}" />
                         
                         </tr>
                     </thead>
@@ -50,7 +50,7 @@
                         
                             <td>${fieldValue(bean: autonomyInstance, field: "habitants")}</td>
                         
-                            <td>${fieldValue(bean: autonomyInstance, field: "president")}</td>
+                            <td>${fieldValue(bean: autonomyInstance, field: "density")}</td>
                         
                         </tr>
                     </g:each>

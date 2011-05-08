@@ -54,7 +54,7 @@
                                   <label for="area"><g:message code="autonomy.area.label" default="Area" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'area', 'errors')}">
-                                    <g:textField name="area" value="${fieldValue(bean: autonomyInstance, field: 'area')}" />
+                                    <g:textField name="area" value="${autonomyInstance?.area}" />
                                 </td>
                             </tr>
                         
@@ -63,7 +63,16 @@
                                   <label for="habitants"><g:message code="autonomy.habitants.label" default="Habitants" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'habitants', 'errors')}">
-                                    <g:textField name="habitants" value="${fieldValue(bean: autonomyInstance, field: 'habitants')}" />
+                                    <g:textField name="habitants" value="${autonomyInstance?.habitants}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="density"><g:message code="autonomy.density.label" default="Density" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'density', 'errors')}">
+                                    <g:textField name="density" value="${autonomyInstance?.density}" />
                                 </td>
                             </tr>
                         
@@ -91,6 +100,24 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'ranking', 'errors')}">
                                     <g:textField name="ranking" value="${autonomyInstance?.ranking}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="pibPerCapita"><g:message code="autonomy.pibPerCapita.label" default="Pib Per Capita" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'pibPerCapita', 'errors')}">
+                                    <g:textField name="pibPerCapita" value="${autonomyInstance?.pibPerCapita}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="rankingPerCapita"><g:message code="autonomy.rankingPerCapita.label" default="Ranking Per Capita" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'rankingPerCapita', 'errors')}">
+                                    <g:textField name="rankingPerCapita" value="${autonomyInstance?.rankingPerCapita}" />
                                 </td>
                             </tr>
                         
@@ -132,32 +159,32 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="exporters"><g:message code="autonomy.exporters.label" default="Exporters" /></label>
+                                  <label for="exportsTo"><g:message code="autonomy.exportsTo.label" default="Exports To" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'exporters', 'errors')}">
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'exportsTo', 'errors')}">
                                     
 <ul>
-<g:each in="${autonomyInstance?.exporters?}" var="e">
-    <li><g:link controller="exporterCountry" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
+<g:each in="${autonomyInstance?.exportsTo?}" var="e">
+    <li><g:link controller="importerCountry" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
 </g:each>
 </ul>
-<g:link controller="exporterCountry" action="create" params="['autonomy.id': autonomyInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'exporterCountry.label', default: 'ExporterCountry')])}</g:link>
+<g:link controller="importerCountry" action="create" params="['autonomy.id': autonomyInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'importerCountry.label', default: 'ImporterCountry')])}</g:link>
 
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="importers"><g:message code="autonomy.importers.label" default="Importers" /></label>
+                                  <label for="importsFrom"><g:message code="autonomy.importsFrom.label" default="Imports From" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'importers', 'errors')}">
+                                <td valign="top" class="value ${hasErrors(bean: autonomyInstance, field: 'importsFrom', 'errors')}">
                                     
 <ul>
-<g:each in="${autonomyInstance?.importers?}" var="i">
-    <li><g:link controller="importerCountry" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
+<g:each in="${autonomyInstance?.importsFrom?}" var="i">
+    <li><g:link controller="exporterCountry" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
 </g:each>
 </ul>
-<g:link controller="importerCountry" action="create" params="['autonomy.id': autonomyInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'importerCountry.label', default: 'ImporterCountry')])}</g:link>
+<g:link controller="exporterCountry" action="create" params="['autonomy.id': autonomyInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'exporterCountry.label', default: 'ExporterCountry')])}</g:link>
 
                                 </td>
                             </tr>

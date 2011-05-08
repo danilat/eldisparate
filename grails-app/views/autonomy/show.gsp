@@ -58,6 +58,13 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="autonomy.density.label" default="Density" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "density")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="autonomy.president.label" default="President" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "president")}</td>
@@ -75,6 +82,20 @@
                             <td valign="top" class="name"><g:message code="autonomy.ranking.label" default="Ranking" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "ranking")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="autonomy.pibPerCapita.label" default="Pib Per Capita" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "pibPerCapita")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="autonomy.rankingPerCapita.label" default="Ranking Per Capita" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: autonomyInstance, field: "rankingPerCapita")}</td>
                             
                         </tr>
                     
@@ -107,12 +128,12 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="autonomy.exporters.label" default="Exporters" /></td>
+                            <td valign="top" class="name"><g:message code="autonomy.exportsTo.label" default="Exports To" /></td>
                             
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
-                                <g:each in="${autonomyInstance.exporters}" var="e">
-                                    <li><g:link controller="exporterCountry" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
+                                <g:each in="${autonomyInstance.exportsTo}" var="e">
+                                    <li><g:link controller="importerCountry" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
                                 </g:each>
                                 </ul>
                             </td>
@@ -120,12 +141,12 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="autonomy.importers.label" default="Importers" /></td>
+                            <td valign="top" class="name"><g:message code="autonomy.importsFrom.label" default="Imports From" /></td>
                             
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
-                                <g:each in="${autonomyInstance.importers}" var="i">
-                                    <li><g:link controller="importerCountry" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
+                                <g:each in="${autonomyInstance.importsFrom}" var="i">
+                                    <li><g:link controller="exporterCountry" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
                                 </g:each>
                                 </ul>
                             </td>
