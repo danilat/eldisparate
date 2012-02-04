@@ -13,8 +13,8 @@
 <div id="wrap">
 	<div id="head">
 			<div id="col8" />
-			<a href="index.html"><img src="img/logo.png"  class="flo-left" /><h1>elDisparate</h1></a>
-			<h2><img src="img/logo_texto.png" /><br/>¿En qué conflictos participa tu Comunidad Autónoma?<br/>Importación y exportación de armas en ${autonomy.realName}</h2>
+			<a href="/"><img src="img/logo.png"  class="flo-left" /><h1>elDisparate</h1></a>
+			<h2><a href="/"><img src="img/logo_texto.png" /></a><br/>¿En qué conflictos participa tu Comunidad Autónoma?<br/>Importación y exportación de armas en ${autonomy.realName}</h2>
 			</div>
 			<div id="col9" />
 			<a href="http://twitter.com/eldisparate" target="_blank"><img src="img/ico_twitter.png" /></a>
@@ -126,7 +126,7 @@
 		<div class="linea4px"></div>
 		<div class="linea2px"></div>
 		<div id="col5">
-			<span class="title_dest">Destinos <span class="red">disparatados</span><br /><span class="pq">* preocupantes</span></span><br /><br />
+			<span class="title_dest">Destinos <span class="red">disparatados</span><br /><span class="pq"> preocupantes *</span></span><br /><br />
 			<div class="quote">
 
 * <span class="bold">¿Qué son destinos <i>preocupantes</i>?</span> Aquellos que están en conflicto armado, <br />sufren situaciones de grave inestabilidad interna o en los que se producen graves violaciones de los derechos humanos.</div><br /><br /><br />
@@ -218,7 +218,7 @@ ${conflictiveCountries(countries: autonomy.exportsTo)}
 	</div>
 	
 	<div id="foot">
-		<div id="col10"><br />Todos los datos corresponden al año 2009 [<a href="http://blog.eldisparate.de/datos">+info</a>]<br/><br/>
+		<div id="col10"><br />Todos los datos corresponden al año 2009 [<a href="http://blog.eldisparate.de/datos" target="_blank">+info</a>]<br/><br/>
 		<a href="http://www.eldisparate.de">elDisparate</a> es un proyecto <a href="http://www.abredatos.es"  target="_blank">Abredatos 2011</a>
 		</div>
 		<div id="col11">

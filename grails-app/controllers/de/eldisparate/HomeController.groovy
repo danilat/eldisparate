@@ -13,7 +13,9 @@ class HomeController {
 		if(autonomy){
 			return [autonomy:autonomy, conflictives: countriesService.conflictives()]
 		}else{
-			render "No existe la Comunidad Autónoma"
+			def text = '<h1>Si puedes verme <a href="http://www.youtube.com/watch?v=8rGecaVVlyU" target="blank">ya estás muerto</a></h1><img src="' + g.resource(dir:"img", file:'sasa.jpg') +'"><p>Ande vas, Mocé!!! Que eso no existe!!</p>'
+			
+			render text
 		}
 	}
 }

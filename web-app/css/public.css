@@ -1,7 +1,6 @@
  /* eldisparate css by biotive */
  
 /* ESTILOS GENERALES */
-
 body { margin:0 auto; padding:0; font-family: Verdana; font-size:11px; color:#000; text-align:center;  background:#ffebbe; }
 html, body {  }
 td {  }
@@ -18,7 +17,6 @@ img {border:none}
 #foot {clear:both; width:960px; padding:10px 0px 50px 0px; line-height: 1.3em; text-align:left; font-size: 12px; font-weight:normal; margin:0px auto;}
 #foot a {color:#B8002D; text-decoration: underline;}
 
-
 /* ESTILOS TEXTO */
 h2 {font-size: 14px; font-family: Georgia; color:#000; padding-top:70px;}
 h3 {font-size:12px;  padding:10px;}
@@ -27,10 +25,10 @@ a {color:#000; text-decoration: underline;}
 .cpo {width:350px; text-align: center; font-size:14px; }
 .title_comunidad {font-family: Georgia; font-size:36px;text-transform: uppercase; font-weight: bold;}
 .title_datos {font-family: Arial; font-size:18px; font-weight: bold; color:#B8002D; text-align:left;}
-.text_datos {font-family: Arial; font-size:16px; font-weight: bold; color:#000; text-align:left; line-height: 1.3em;}
+.text_datos {font-family: Arial; font-size:18px; font-weight: bold; color:#000; text-align:left; line-height: 1.3em;}
 .pretitle_imex {font-family: Georgia; font-size:30px; font-weight: bold; color:#af6d0e;}
 .title_imex {font-family: Georgia; font-size:60px;text-transform: uppercase; font-weight: bold; color:#B8002D;}
-.text_imex {font-family: Arial; font-size:50px;text-transform: uppercase; font-weight: bold; color:#000;}
+.text_imex {font-family: Arial; font-size:40px;text-transform: uppercase; font-weight: bold; color:#000;}
 .quote {clear:both; font-family: Georgia; font-size: 14px; text-align: center;}
 .red {color:#B8002D;}
 .nar {color:#af6d0e; font-weight: bold;}
@@ -39,6 +37,9 @@ a {color:#000; text-decoration: underline;}
 .text_tipo {font-family: Arial; font-size:14px; color:#000; text-align:left; line-height: 1.3em;}
 .bold {font-weight: bold;}
 .flo-left {float:left; padding-right:20px; }
+.pq {font-size:38px;}
+.title_logo {font-family: Georgia; font-size:36px;color:#b8002d; }
+
 
 /* COLUMNAS */
 #col1 {width:380px; float:left; margin-top:20px;}
@@ -46,12 +47,14 @@ a {color:#000; text-decoration: underline;}
 #col3 {width:440px; float:left; margin-top:20px; text-align: right;}
 #col4 {width:440px; float:right; margin-top:20px; text-align: left;}
 #col5 {margin-top:20px;}
-#col6 {clear:both; width:140px;float:left;text-align:right;}
-#col7 {width:800px;float:right; text-align:left; }
+#col6 {clear:both; width:350px;float:left;text-align:right;}
+#col7 {width:400px;float:left; text-align:left;padding-left:20px; }
 #col8 {width:630px;float:left;text-align:left;}
 #col9 {width:330px;float:right; text-align:right; padding-top: 95px; }
 #col10 {width:440px; float:left;text-align: left;}
 #col11 {width:440px; float:right; text-align: left;}
+#col12 {width:620px; float:left;}
+#col13 {width:300px; float:right; }
 
 /* FORMULARIOS */
 .title {display:block; width:350px; color:#fff; background:#000; border:1px solid black; padding:10px; font-size: 16px; font-weight: bold;}
@@ -66,3 +69,4 @@ input {width:330px; padding:5px; margin-bottom: 15px; }
 .con { display : inline-block; }
 * html .con { height : 1%; }
 .con { display : block; }
+

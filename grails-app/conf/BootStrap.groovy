@@ -38,7 +38,7 @@ class BootStrap {
 			    def field = line.tokenize("#")
 				if(field[0] && field[0]!="PAIS" && field[0]!="Total"){
 				def countryName = field[0]
-				BigInteger money = new BigDecimal(field[2].replaceAll("\\.","").replaceAll(",",".")) * 1000
+				BigInteger money = new BigDecimal(field[2].replaceAll("\\.","").replaceAll(",","."))
 				def country = new ExporterCountry(name:countryName, money: money.toString(), autonomy: autonomy)
 				country.save(flush:true,failOnError:true)
 				}
@@ -54,7 +54,7 @@ class BootStrap {
 			    def field = line.tokenize("#")
 				if(field[0] && field[0]!="PAIS" && field[0]!="Total"){
 				def countryName = field[0]
-				BigInteger money = new BigDecimal(field[2].replaceAll("\\.","").replaceAll(",",".")) * 1000
+				BigInteger money = new BigDecimal(field[2].replaceAll("\\.","").replaceAll(",","."))
 				def country = new ImporterCountry(name: countryName, money: money.toString(), autonomy: autonomy)
 				country.save(flush:true,failOnError:true)
 				}
@@ -70,7 +70,7 @@ class BootStrap {
 		    def field = line.tokenize("#")  
 			def autonomyName = field[0]
 			if(field[2] && field[2]!="VALOR"){
-				BigInteger money = new BigDecimal(field[2].replaceAll("\\.","").replaceAll(",",".")) * 1000
+				BigInteger money = new BigDecimal(field[2].replaceAll("\\.","").replaceAll(",","."))
 				def autonomy = Autonomy.findByName(autonomyName)
 				if(autonomy){
 					autonomy[attributeToSave] = money.toString()
