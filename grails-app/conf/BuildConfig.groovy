@@ -28,4 +28,7 @@ grails.project.dependency.resolution = {
 
         runtime 'mysql:mysql-connector-java:5.1.5'
     }
+    plugins {
+        compile ":cloud-bees:0.5.4"
+    }
 }
