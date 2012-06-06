@@ -22,7 +22,6 @@
 			<a href="http://flickr.com/photos/eldisparate"  target="_blank"><img src="img/ico_flickr.png" /></a>
 			<a href="http://bit.ly/eldisparate_spotify"  target="_blank"><img src="img/ico_spotify.png" /></a>
 			<a href="http://vimeo.com/eldisparate" target="_blank"><img src="img/ico_vimeo.png" /></a>
-			<a href="http://youtube.com/eldisparate"  target="_blank"><img src="img/ico_youtube.png" /></a>
 		</div>
 	</div>
 	<div id="content">
@@ -81,7 +80,7 @@ Pulsa en tu Comunidad Autónoma en el mapa para ver los datos</div><br /><br />
 		<div id="col11">
 
 		<a href="http://blog.eldisparate.de/equipo"  target="_blank"><img src="img/equipo.png" class="flo-left" /></a>
-		<span class="bold"><br /><span class="bold"><span class="red">elDisparate</span> continúa en su <a href="http://blog.eldisparate.de"  target="_blank">blog</a></span> <br /><br />Equipo General Huesconsin #t34: <br /></span>
+		<span class="bold"><br /><span class="bold">Equipo General Huesconsin #t34: <br /></span>
 						<a href="http://twitter.com/tobiotive"  target="_blank">@tobiotive</a> Toño García<br />
 						<a href="http://twitter.com/dani_latorre"  target="_blank">@dani_latorre</a> Dani Latorre <br/>
 						<a href="http://twitter.com/pensieve"  target="_blank">@pensieve</a> Mamen Pradel <br/>
