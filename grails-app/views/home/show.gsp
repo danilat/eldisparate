@@ -14,7 +14,7 @@
 	<div id="head">
 			<div id="col8" />
 			<a href="/"><img src="img/logo.png"  class="flo-left" /><h1>elDisparate</h1></a>
-			<h2><a href="/"><img src="img/logo_texto.png" /></a><br/>¿En qué conflictos participa tu Comunidad Autónoma?<br/>Importación y exportación de armas en ${autonomy.realName}</h2>
+			<h2><a href="/"><img src="img/logo_texto.png" /></a><br/>¿En qué conflictos participa tu Comunidad Autónoma?<br/>Importación y exportación de armas en ${autonomy.realName} en 2009</h2>
 			</div>
 			<div id="col9" />
 			<a href="http://twitter.com/eldisparate" target="_blank"><img src="img/ico_twitter.png" /></a>
@@ -30,7 +30,7 @@
 		<div id="col1"><img src="img/mapas_comunidades/${autonomy.name.toLowerCase().replaceAll(' ', '_')}.png" /></div>
 		<div id="col2">
 			<span class="title_comunidad">${autonomy.realName}</span><br /><br /><br /><br />
-			<span class="title_datos">Datos generales:</span><br /><br />
+			<span class="title_datos">Datos generales en 2009:</span><br /><br />
 			<span class="text_datos">
 			Superficie: ${autonomy.area} km²<br /> 
 			Población: ${autonomy.habitants} hab.²<br /><br />

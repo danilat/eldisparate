@@ -14,7 +14,7 @@
 <div id="head">
 			<div id="col8" />
 			<a href="/"><img src="img/logo.png"  class="flo-left" /><h1>elDisparate</h1></a>
-			<h2><a href="/"><img src="img/logo_texto.png" /></a><br/>¿En qué conflictos participa tu Comunidad Autónoma?<br/>Importación y exportación de armas en España</h2>
+			<h2><a href="/"><img src="img/logo_texto.png" /></a><br/>¿En qué conflictos participa tu Comunidad Autónoma?<br/>Importación y exportación de armas en España en 2009</h2>
 			</div>
 			<div id="col9" />
 			<a href="http://twitter.com/eldisparate" target="_blank"><img src="img/ico_twitter.png" /></a>
