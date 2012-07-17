@@ -55,10 +55,22 @@
 		<br class="brr" /><br /><br />
 		<div class="quote">Totales. Incluyen todo tipo de bienes.<br />Alimentos, animales, plantas, vehículos, muebles, máquinas, metales, químicos...</div>
 		<div id="col3">
-		<iframe src="http://player.vimeo.com/video/23420421?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="381" height="111" frameborder="0"></iframe><br /><br />
+			<video autoplay="autoplay" loop="loop">
+				<source src="${resource(dir:'videos', file:'pistola.ogv')}" type="video/ogg" />
+				<source src="${resource(dir:'videos', file:'pistola.mp4')}" type="video/mp4" />
+				
+				<iframe src="http://player.vimeo.com/video/23420421?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="381" height="111" frameborder="0"></iframe>
+			</video>
+		<br /><br />
 		</div>
 		<div id="col3">
-		<iframe src="http://player.vimeo.com/video/23420378?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="381" height="111" frameborder="0"></iframe><br /><br />
+			<video autoplay="autoplay" loop="loop">
+				<source src="${resource(dir:'videos', file:'pistola_flip.ogv')}" type="video/ogg" />
+				<source src="${resource(dir:'videos', file:'pistola_flip.mp4')}" type="video/mp4" />
+				
+				<iframe src="http://player.vimeo.com/video/23420378?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="381" height="111" frameborder="0"></iframe>
+			</video>
+		<br /><br />
 		</div>
 		<!-- FIN BLOQUE -->
 				<!-- INICIO BLOQUE -->
@@ -79,13 +91,23 @@
 		<br class="brr" />
 		<div class="quote">Armas de guerra, armas de fuego, explosivos, municiones, proyectiles, armas blancas, partes y accesorios</div>
 		<div id="col3">
+			<video autoplay="autoplay" loop="loop">
+				<source src="${resource(dir:'videos', file:'tanque.ogv')}" type="video/ogg" />
+				<source src="${resource(dir:'videos', file:'tanque.mp4')}" type="video/mp4" />
+				
+				<iframe src="http://player.vimeo.com/video/23422632?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="441" height="80" frameborder="0"></iframe>
+			</video>
 
-
-		<iframe src="http://player.vimeo.com/video/23422632?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="441" height="80" frameborder="0"></iframe>
 		<br /><br />
 		</div>
 		<div id="col4">
-		<iframe src="http://player.vimeo.com/video/23422635?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="441" height="80" frameborder="0"></iframe><br /><br />
+			<video autoplay="autoplay" loop="loop">
+				<source src="${resource(dir:'videos', file:'tanque_flip.ogv')}" type="video/ogg" />
+				<source src="${resource(dir:'videos', file:'tanque_flip.mp4')}" type="video/mp4" />
+				
+				<iframe src="http://player.vimeo.com/video/23422635?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="441" height="80" frameborder="0"></iframe>
+			</video>
+		<br /><br />
 		</div>
 		<!-- FIN BLOQUE -->
 		<!-- INICIO BLOQUE -->
@@ -111,10 +133,22 @@
 		</div>
 		<br class="brr"/> 
 		<div id="col3">
-		<iframe src="http://player.vimeo.com/video/23420443?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="440" height="88" frameborder="0"></iframe><br /><br />
+			<video autoplay="autoplay" loop="loop">
+				<source src="${resource(dir:'videos', file:'metralleta.ogv')}" type="video/ogg" />
+				<source src="${resource(dir:'videos', file:'metralleta.mp4')}" type="video/mp4" />
+				
+				<iframe src="http://player.vimeo.com/video/23420443?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="440" height="88" frameborder="0"></iframe>
+			</video>
+		<br /><br />
 		</div>
 			<div id="col4">
-		<iframe src="http://player.vimeo.com/video/23420400?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="440" height="88" frameborder="0"></iframe><br /><br />
+				<video autoplay="autoplay" loop="loop">
+					<source src="${resource(dir:'videos', file:'metralleta_flip.ogv')}" type="video/ogg" />
+					<source src="${resource(dir:'videos', file:'metralleta_flip.mp4')}" type="video/mp4" />
+					
+					<iframe src="http://player.vimeo.com/video/23420400?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="440" height="88" frameborder="0"></iframe>
+				</video>
+		<br /><br />
 		</div>
 
 
@@ -137,7 +171,12 @@
 ${conflictiveCountries(countries: autonomy.exportsTo)}
 </div>
 <br class="brr" />
-<iframe src="http://player.vimeo.com/video/23420434?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="326" height="223" frameborder="0"></iframe>
+<video autoplay="autoplay" loop="loop">
+	<source src="${resource(dir:'videos', file:'mina.ogv')}" type="video/ogg" />
+	<source src="${resource(dir:'videos', file:'mina.mp4')}" type="video/mp4" />
+	<iframe src="http://player.vimeo.com/video/23420434?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="326" height="223" frameborder="0"></iframe>
+</video>
+
 <br class="brr" /><br /><br />
 
 	<!-- INICIO BLOQUE --><!-- A PARTIR DE AQUI NO HAY QUE TOCAR NADA MAS :) -->
@@ -208,7 +247,12 @@ ${conflictiveCountries(countries: autonomy.exportsTo)}
 
 		<br class="brr" /><br /><br />
 
-	<iframe src="http://player.vimeo.com/video/23422714?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="347" height="108" frameborder="0"></iframe>
+	<video autoplay="autoplay" loop="loop">
+		<source src="${resource(dir:'videos', file:'helicoptero.ogv')}" type="video/ogg" />
+		<source src="${resource(dir:'videos', file:'helicoptero.mp4')}" type="video/mp4" />
+		
+		<iframe src="http://player.vimeo.com/video/23422714?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="347" height="108" frameborder="0"></iframe>
+	</video>
 
 		<br class="brr" /><br /><br />
 		<div class="linea4px"></div>
