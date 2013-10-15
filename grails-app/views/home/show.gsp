@@ -36,9 +36,7 @@
 			Población: ${autonomy.habitants} hab.²<br /><br />
 			
 			PIB: ${autonomy.pib} (#${autonomy.ranking} en España) <br />
-			PIB (per cápita): ${autonomy.pibPerCapita} (#${autonomy.rankingPerCapita} en España)<br /><br />
-
-			Presidente: ${autonomy.president}<br /><br /></span>
+			PIB (per cápita): ${autonomy.pibPerCapita} (#${autonomy.rankingPerCapita} en España)</span>
 		</div>
 		<!-- INICIO BLOQUE -->
 		<div class="linea4px"></div>
