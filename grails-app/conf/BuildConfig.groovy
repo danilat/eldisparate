@@ -26,4 +26,9 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
     }
+
+    plugins {
+       compile ':heroku:1.0.1'
+       compile ':cloud-support:1.0.8'
+    }
 }
