@@ -7,6 +7,8 @@ class BootStrap {
     def init = { servletContext ->
 		def path = servletContext.getRealPath("/")
 		
+		//println path
+		
 		def autonomiesNames =["ANDALUCIA", "ARAGON", "ASTURIAS", "BALEARES", "CANARIAS",
 		"CANTABRIA", "CASTILLA LA MANCHA", "CASTILLA LEON", "CATALUNYA", "CIUDAD AUTONOMA DE CEUTA",
 		"CIUDAD AUTONOMA DE MELILLA", "COMUNIDAD VALENCIANA", "EXTREMADURA", "GALICIA",
@@ -17,23 +19,23 @@ class BootStrap {
 			if(!autonomy){
 				autonomy = new Autonomy(name: name)
 				autonomy.save(flush:true,failOnError:true)
-				saveExporterCountries("${path}data/${name.toLowerCase().replaceAll(' ', '_')}/Importaciones.dat", autonomy)
-				saveImporterCountries("${path}data/${name.toLowerCase().replaceAll(' ', '_')}/Exportaciones.dat", autonomy)
+				saveExporterCountries("data/${name.toLowerCase().replaceAll(' ', '_')}/Importaciones.dat", autonomy, servletContext)
+				saveImporterCountries("data/${name.toLowerCase().replaceAll(' ', '_')}/Exportaciones.dat", autonomy, servletContext)
 			}
 		}
 		
-		saveCSVDataToAutonomies("${path}/data/Exportaciones.dat", 'totalExports')
-		saveCSVDataToAutonomies("${path}/data/Importaciones.dat", 'totalImports')
-		saveCSVDataToAutonomies("${path}/data/armasExportacion.dat", 'gunsExports')
-		saveCSVDataToAutonomies("${path}/data/armasImportacion.dat", 'gunsImports')
+		saveCSVDataToAutonomies("data/Exportaciones.dat", 'totalExports', servletContext)
+		saveCSVDataToAutonomies("data/Importaciones.dat", 'totalImports', servletContext)
+		saveCSVDataToAutonomies("data/armasExportacion.dat", 'gunsExports', servletContext)
+		saveCSVDataToAutonomies("data/armasImportacion.dat", 'gunsImports', servletContext)
 		
 		
-		loadCSVINEData("${path}/data/DatosINE.csv")
+		loadCSVINEData("data/DatosINE.csv", servletContext)
 		
     }
-	def saveExporterCountries(path, autonomy){
-		File file = new File(path)
-		if(file.exists()){
+	def saveExporterCountries(path, autonomy, context){
+		def file = context.getResourceAsStream(path)
+		if(file){
 			file.eachLine() { line ->  
 			    def field = line.tokenize("#")
 				if(field[0] && field[0]!="PAIS" && field[0]!="Total"){
@@ -47,9 +49,9 @@ class BootStrap {
 			println "${path} no existe"
 		}
 	}
-	def saveImporterCountries(path, autonomy){
-		File file = new File(path)
-		if(file.exists()){
+	def saveImporterCountries(path, autonomy, context){
+		def file = context.getResourceAsStream(path)
+		if(file){
 			file.eachLine() { line ->  
 			    def field = line.tokenize("#")
 				if(field[0] && field[0]!="PAIS" && field[0]!="Total"){
@@ -64,8 +66,8 @@ class BootStrap {
 		}
 	}
 
-	def saveCSVDataToAutonomies(path, attributeToSave){
-		File file = new File(path)
+	def saveCSVDataToAutonomies(path, attributeToSave, context){
+		def file = context.getResourceAsStream(path)
 		file.eachLine() { line ->  
 		    def field = line.tokenize("#")  
 			def autonomyName = field[0]
@@ -79,8 +81,8 @@ class BootStrap {
 		}
 	}
 	
-	def loadCSVINEData(path){
-		File file = new File(path)
+	def loadCSVINEData(path, context){
+		def file = context.getResourceAsStream(path)
 		file.eachLine() { line ->  
 		    def field = line.tokenize("#")  
 			def autonomyName = field[0]
