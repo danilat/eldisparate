@@ -85,7 +85,7 @@ log4j = {
 
     warn   'org.mortbay.log'
 }
-
+grails.plugin.databasesession.enabled = false
 
 grails.config.locations = [ "file:/Users/danilat/cloudfoundry.groovy"]
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements
