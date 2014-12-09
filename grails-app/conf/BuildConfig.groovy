@@ -28,9 +28,10 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-       compile(':heroku:1.0.1') {
-        exclude 'database-session'
-       }
-       compile ':cloud-support:1.0.8'
+        compile ':webxml:1.4.1'
+        compile(':heroku:1.0.1') {
+            exclude 'database-session'
+        }
+        compile ':cloud-support:1.0.8'
     }
 }
